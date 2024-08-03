@@ -25,7 +25,7 @@ function createApp() {
   app.use(express.json());
 
   app.get('/', (_req, res: Response) => {
-    res.send('Fudibot is online')
+    res.send('generate image is aliveee')
   });
 
   routerApi(app, io);
