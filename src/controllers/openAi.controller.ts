@@ -11,7 +11,7 @@ export async function generateImage (req: Request, res: Response) {
   
   try {
 
-    const prompt = 'Imagina que eres un diseñador gráfico y que un cliente te pide que diseñes unas tarjetas de presentación, esto siempre lo harás básandote en el historial que es el siguiente [{history}], debe ser un diseño elegante y moderno, realizas 2 propuestas'.replace('{history}', history);
+    const prompt = 'Imagina que eres un diseñador gráfico y un cliente te ha pedido que diseñes unas tarjetas de presentación. Siempre deberás basarte en la conversación del historial, que es la siguiente: [{history}]. Crea dos propuestas de diseño que sean elegantes y modernas.'.replace('{history}', history);
    
     const image = await ai.generateImage(prompt);
 
