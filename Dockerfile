@@ -1,8 +1,10 @@
 FROM node:18
 WORKDIR /usr/src/app
+COPY pnpm-lock.yaml ./
+RUN npm install -g pnpm
 COPY package*.json ./
-RUN npm install
+RUN pnpm install
 COPY . .
-RUN npm run build
+RUN pnpm run build
 EXPOSE 8000
-CMD [ "node", "dist/index.js" ]
+CMD [ "pnpm", "start" ]
