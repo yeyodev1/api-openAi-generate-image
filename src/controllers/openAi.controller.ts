@@ -10,6 +10,10 @@ export async function generateImage (req: Request, res: Response) {
 
   const { history } = req.body;
 
+  if(!history) {
+    return console.error(' no hay historial')
+  }
+
   const parsedHistory = parseHistory(history);
   
   try {
